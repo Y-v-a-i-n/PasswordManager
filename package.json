@@ -1,0 +1,15 @@
+{
+  "name": "secure-passwordmanager-gui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yvain",
+  "license": "ISC",
+  "description": "A secure password manager",
+  "dependencies": {
+    "better-sqlite3": "^7.6.2",
+    "quick.db": "^9.0.6"
+  }
+}

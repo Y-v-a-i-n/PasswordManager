@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="main.js"></script>
+        <title>Secure Password Manager</title>
+        <script>
+            if(sessionStorage.getItem("key")==null){
+                location.href = "login.html";
+            }
+        </script>
+    </head>
+    <body class="body">
+        <center>
+            <div class="array-div">
+                <div class="options">
+                    <button id="button" onclick="location.href='addData.html'">add</button>
+                    <button id="button" onclick="location.href='setData.html'">set</button>
+                    <button id="button" onclick="location.href='delData.html'">del</button>
+                    <button id="button" onclick="Disconnect()">out</button>
+                </div>
+                <table class="array" border="0">
+                    <thead>
+                        <tr><td>Name </td><td>Link </td><td>Username </td><td>Password </td></tr>
+                    </thead>
+                    <tbody id="data"></tbody>
+                </table>
+            </div>
+        </center>
+    </body>
+    <script>LoadData()</script>
+</html>
