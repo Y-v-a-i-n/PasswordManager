@@ -13,7 +13,7 @@ const SHA512 = require("./secure/sha512.js"),
     },
     Connect = passwd => {
         db.get("passwd").then((password => {
-            passwd && SHA512(passwd) == password ? (Msg("Connecting the account in progress..."), setTimeout((() => {
+            passwd && SHA512(SHA512(passwd)) == password ? (Msg("Connecting the account in progress..."), setTimeout((() => {
                 db.get("key").then((key => {
                     (async () => {
                         await sessionStorage.setItem("key", xor.decrypt(passwd, key)), location.href = "index.html"
@@ -33,7 +33,7 @@ const SHA512 = require("./secure/sha512.js"),
                 for (let i = 0; i < 4096; i++) key += "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&é~\"#'{([-|è`_\\ç^à@)]°+=}¨$£¤ù%µ*§!/:.;?," [Math.floor(103 * Math.random())];
                 setTimeout((() => {
                     (async () => {
-                        await db.set("passwd", SHA512(passwd)), await db.set("set", !0), await db.set("key", xor.encrypt(passwd, key)), location.href = "login.html"
+                        await db.set("passwd", SHA512(SHA512(passwd))), await db.set("set", !0), await db.set("key", xor.encrypt(passwd, key)), location.href = "login.html"
                     })()
                 }), 1e3)
             } else Err("The password is not strong enough");
