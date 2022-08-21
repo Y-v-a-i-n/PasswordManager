@@ -4,7 +4,6 @@ const {
 } = require("electron"), {
     QuickDB: QuickDB
 } = require("quick.db");
-require("./src/secure/xor.js");
 db = new QuickDB;
 const createWindow = () => {
     let window = new BrowserWindow({

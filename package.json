@@ -9,6 +9,7 @@
   "license": "ISC",
   "description": "A secure password manager",
   "dependencies": {
+    "aes256": "^1.1.0",
     "better-sqlite3": "^7.6.2",
     "quick.db": "^9.0.6"
   }
