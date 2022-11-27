@@ -4,3 +4,10 @@
 ![image](https://cdn.discordapp.com/attachments/1007360388117049487/1007360668372049990/unknown.png) </br>
 ![image](https://cdn.discordapp.com/attachments/1007360388117049487/1007360720368844840/unknown.png) </br>
 ![image](https://cdn.discordapp.com/attachments/1007360388117049487/1007361138318647337/unknown.png) </br>
+
+### Comment lancer PasswordManager ? 
+
+```sh
+$ npm install electron -g
+$ electron .
+``` 
